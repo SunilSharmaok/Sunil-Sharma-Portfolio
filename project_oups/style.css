@@ -1,0 +1,494 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(90deg, #ffdd00,rgb(0, 234, 255));
+    color: rgb(0, 0, 0);
+    padding: 8px 25px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust based on your preference */
+    width: auto;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo span {
+    color: #000000;
+}
+
+.sign-in {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: hwb(0 45% 55% / 0.5);
+    padding: 8px 15px;
+    border-radius: 17px;
+}
+
+.sign-in i {
+    font-size: 24px;
+}
+
+.sign-in:hover {
+    transform: scale(1.1);
+    background: rgba(128, 128, 128, 0.7); 
+}
+
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(174, 173, 173);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(157, 0, 255);
+    z-index: 1001;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    border: 2px solid #4285F4;
+    color: #4285F4;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.google-signin img {
+    width: 50px;
+    height: 25px;
+}
+
+.google-signin:hover {
+    background: #1acdff;
+    color: white;
+}
+
+.close-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    background: #f24949;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background: #ff0000;
+}
+
+.title-container {
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 150px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #ffdd00,rgb(0, 234, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    animation: slideInSlightlyRight 1.5s ease-in-out forwards;
+    cursor: pointer;
+    
+}
+
+.subtitle {
+    font-size: 50px;
+    margin-left: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    animation: slideInSlightlyRight 2s ease-in-out forwards;
+    cursor: pointer;
+}
+@keyframes slideInSlightlyRight {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-70px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+.title-container2 {
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title2 {
+    font-size: 40px;
+    font-weight:bold;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #ffdd00,rgb(0, 234, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    animation: slideInSlightlyRight 1.5s ease-in-out forwards;
+    margin-left: 280px;
+    margin-right: 280px;
+    font-style: italic;
+    font-family:monospace;
+    cursor: pointer;
+}
+
+.subtitle2 {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg,#ffdd00,rgb(0, 234, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    animation: slideInSlightlyRight 2s ease-in-out forwards;
+    font-family:monospace;
+    font-style: italic;
+    cursor: pointer;
+}
+@keyframes slideInSlightlyRight {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-70px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+.key-features {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.feature {
+    background: linear-gradient(90deg, #ffdd00,rgb(0, 234, 255)); 
+    color: rgb(0, 0, 0); 
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out forwards;
+    cursor: pointer;
+}
+
+.feature:hover{
+    transform: scale(1.1);
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(70px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+h1{
+    font-size: 70px;
+    font-weight:650;
+    color:rgb(0, 255, 238);
+    padding: 8px;
+    margin-top: 90px;
+    display: inline-block;
+    font-weight: bold;
+    animation: slideInSlightlyRight 1.5s ease-in-out forwards;
+}
+
+.second{
+    font-size: 70px;
+    font-weight:650;
+    color: rgb(238, 255, 0);
+    padding: 8px;
+    margin-top: 90px;
+    display: inline-block;
+    font-weight: bold;
+    animation: slideInSlightlyRight 1.5s ease-in-out forwards;
+}
+
+h3{
+    font-size: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+/* ===== Planner Section Styling ===== */
+.planner {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgb(251, 255, 0);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    border: 1px solid #e0e0e0;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+.planner input, .planner select {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    background: #f8f9fa;
+    color: #2d3436;
+}
+
+.planner input:focus, .planner select:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(108,92,231,0.1);
+}
+
+#task {
+    grid-column: 1 / -1;
+}
+
+/* ===== Custom Dropdown Styling ===== */
+.planner select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236c5ce7'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* ===== Priority Specific Styles ===== */
+#priority {
+    border-color: #ff7675;
+    background: #fff2f2;
+}
+#priority option[value='High'] { background: #ff7675; color: white; }
+#priority option[value='Medium'] { background: #fdcb6e; color: white; }
+#priority option[value='Low'] { background: #55efc4; color: white; }
+
+/* ===== Category Specific Styles ===== */
+#category {
+    border-color: #a55eea;
+    background: #f8f5ff;
+}
+#category option[value='Work'] { background: #6c5ce7; color: white; }
+#category option[value='Personal'] { background: #fd79a8; color: white; }
+#category option[value='Health'] { background: #00b894; color: white; }
+#category option[value='Study'] { background: #0984e3; color: white; }
+
+/* ===== Add Task Button ===== */
+.planner button {
+    grid-column: 1 / -1;
+    padding: 14px;
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.planner button:hover {
+    background: #5b4bc4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108,92,231,0.3);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .planner {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+    
+    .planner input, .planner select {
+        width: 100%;
+    }
+}
+
+/* ===== Input Placeholder Styling ===== */
+::placeholder {
+    color: #adadad;
+    opacity: 1;
+}
+
+/* ===== Progress Bar ===== */
+#progress-bar-container {
+    width: 50%;
+    height: 12px;
+    background: #dee2e6;
+    border-radius: 6px;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 0 10px white;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ffdd00,rgb(0, 234, 255));
+    transition: width 0.3s ease;
+}
+
+/* ===== Task List ===== */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.2s ease;
+}
+
+#taskList li:hover {
+    transform: translateX(5px);
+}
+
+.task-high { color: #ff4757; font-weight: 600; }
+.task-medium { color: #eccc68; font-weight: 600; }
+.task-low { color: #2ed573; font-weight: 600; }
+
+#taskList button {
+    padding: 6px 12px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#taskList button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* ===== Clear Button ===== */
+.clear-btn {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #ff0000;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    #progress-bar-container {
+        width: 80%;
+    }
+    
+    .planner {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+

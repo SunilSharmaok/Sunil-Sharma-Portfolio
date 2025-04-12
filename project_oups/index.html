@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimplePlanz - Plan Your Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://i.postimg.cc/0ywKyd2f/Xtreme-Sport-Channel-Logo-2-modified.png" alt="SimplePlanz Logo">
+            <span>SimplePlanz</span>
+        </div>
+        <div class="sign-in" onclick="showSignIn()">
+            <i class="fas fa-sign-in-alt"></i> Sign In 
+        </div>
+    </div>
+    
+    <div id="signInPopup" class="popup">
+        <div class="popup-content">
+            <h2>Sign In</h2>
+            <button class="google-signin" onclick="googleSignIn()">
+                <img src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" alt="Google"> Sign in with Google
+            </button>
+            <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="title-container">
+        <div class="title"><span>SimplePlanz</span></div>
+        <div class="subtitle"><span>Plan Your Day</span></div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/> 
+    <br/> 
+    <div class="title2-container">
+        <div class="title2"><span>"You will never find time for anything. If you want time, you must make it."</span></div>
+        <br/>
+        <br/>
+        <div class="subtitle2"><span>- Charles Buxton</span></div>
+    </div>
+    <br/> 
+    <br/>
+    <br/>
+    <h1>Key</h1>
+    <h4 class="second">Features</h4>
+    <div class="key-features">
+        <div class="feature">Plan your day</div>
+        <div class="feature">Tracks your Productive window</div>
+        <div class="feature">Track your every work</div>
+        <div class="feature">Increase productivity</div>
+        <div class="feature">Task Creation & Management</div>
+        <div class="feature">Time Tracking & Productivity</div>
+        <div class="feature">Cloud Backup & Security</div>
+        <div class="feature">Calendar & Scheduling</div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/> 
+    <div class="container">
+        <h1>Plan Your</h1>
+        <h4 class="second">Day</h4>
+        <br/>
+        <div class="planner">
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>            
+            <input type="text" id="task" placeholder="Enter your task" required>
+            
+            <select id="priority">
+                <option value="High">High Priority 🔴</option>
+                <option value="Medium">Medium Priority 🟡</option>
+                <option value="Low">Low Priority 🟢</option>
+            </select>
+            
+            <select id="category">
+                <option value="Work">Work 💼</option>
+                <option value="Personal">Personal 🏠</option>
+                <option value="Health">Health 🏋️‍♂️</option>
+                <option value="Study">Study 📖</option>
+            </select>
+        
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <br/>
+        <br/>
+        <h2>Progress Status</h2>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <br/>
+        <br/>
+        <ul id="taskList"></ul>
+        
+        <button onclick="clearAllTasks()" class="clear-btn">Clear All</button>
+    </div>
+    <br/>    
+    <br/> 
+    <br/> 
+    <br/>
+    <h3>&copy; 2025 SimplePlanz - All Rights Reserved</h3>
+    <script src="script.js"></script>
+</body>
+</html>
