@@ -17,8 +17,6 @@ Welcome to my professional portfolio! This repository showcases my journey as a 
 
 ## � Featured Projects
 1. **[Sunil Sharma Portfolio]** - Short description (🔗 [Live Demo](https://sunilsharmaportfolio.netlify.app/))
-2. **[Sunil Sharma Portfolio]** - Short description (📁 [Source Code](view-source:https://sunilsharmaportfolio.netlify.app/))
-3. **[Sunil Sharma Portfolio]** - Short description (🏆 Award/Nominated)
 
 ## 🚀 Installation
 ```bash
