@@ -16,8 +16,8 @@ Welcome to my professional portfolio! This repository showcases my journey as a 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ## � Featured Projects
-1. **[Sunil Sharma Portfolio]** - Short description (🔗 [Live Demo](link))
-2. **[Sunil Sharma Portfolio]** - Short description (📁 [Source Code](link))
+1. **[Sunil Sharma Portfolio]** - Short description (🔗 [Live Demo](https://sunilsharmaportfolio.netlify.app/))
+2. **[Sunil Sharma Portfolio]** - Short description (📁 [Source Code](view-source:https://sunilsharmaportfolio.netlify.app/))
 3. **[Sunil Sharma Portfolio]** - Short description (🏆 Award/Nominated)
 
 ## 🚀 Installation
